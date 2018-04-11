@@ -1,0 +1,83 @@
+<ul kendo-panel-bar class="t-side-panel-bgcolor" style="font-size: 14px;"> 
+	<li class="k-state-active"> 
+		<span class="panel-bar-label-no-wrap">Symbol Configuration</span>
+		<div class="config-option-single-row" style="margin:10px 20px; font-size: 14px;"> 
+			<div class="config-option-ie11-overflow-fix"> 
+                <!-- Allow User to pick Symbol Color and background-->
+               <div style="width: 85%; margin: 10px 0 15px 20px;">
+                    <pv-color-picker colorkeyword="Background" ng-model="config.Normal.backgroundColor"></pv-color-picker>
+                    <pv-color-picker colorkeyword="Text Color" ng-model="config.Normal.textColor"></pv-color-picker>
+                    <pv-color-picker colorkeyword="Value Color" ng-model="config.Normal.valueColor"></pv-color-picker>
+                </div>
+			</div>
+        </div> 
+    </li>
+    <!-- HIHI Limit Settings Only Displayed if Hi Limit is set-->
+    <li class="k-state-disable" ng-show="config.HI.limit != undefined"> 
+        <span class="panel-bar-label-no-wrap">HIHI Alarm Settings</span>
+        <div class="config-option-single-row" style="margin:10px 20px; font-size: 14px;"> 
+            <div class="config-option-ie11-overflow-fix"> 
+                <!-- Input for Alarm Limit -->
+                <div class="config-label">HIHI Alarm Limit:</div>
+                <input type="number" step="0.01" style="width: 100px;height: 100%;float: right;margin-right: 25px;" ng-model="config.HIHI.limit">
+                <!-- If limit was provided allow selection of text and background color -->
+                <div ng-show="config.HIHI.limit != undefined" style="width: 85%; margin: 10px 0 15px 20px;">
+                    <pv-color-picker colorkeyword="Background" ng-model="config.HIHI.backgroundColor"></pv-color-picker>
+                    <pv-color-picker colorkeyword="Text Color" ng-model="config.HIHI.textColor"></pv-color-picker>
+                    <pv-color-picker colorkeyword="Value Color" ng-model="config.HIHI.valueColor"></pv-color-picker>
+                </div>
+            </div>
+        </div> 
+    </li>
+    <!-- HI Limit Settings -->
+    <li class="k-state-active"> 
+        <span class="panel-bar-label-no-wrap">HI Alarm Settings</span>
+        <div class="config-option-single-row" style="margin:10px 20px; font-size: 14px;"> 
+            <div class="config-option-ie11-overflow-fix"> 
+                <!-- Input for Alarm Limit -->
+                <div class="config-label">HI Alarm Limit:</div>
+                <input type="number" step="0.01" style="width: 100px;height: 100%;float: right;margin-right: 25px;" ng-model="config.HI.limit">
+                <!-- If limit was provided allow selection of text and background color -->
+                <div ng-show="config.HI.limit != undefined" style="width: 85%; margin: 10px 0 15px 20px;">
+                    <pv-color-picker colorkeyword="Background" ng-model="config.HI.backgroundColor"></pv-color-picker>
+                    <pv-color-picker colorkeyword="Text Color" ng-model="config.HI.textColor"></pv-color-picker>
+                    <pv-color-picker colorkeyword="Value Color" ng-model="config.HI.valueColor"></pv-color-picker>
+                </div>
+            </div>
+        </div> 
+    </li>
+     <!-- LO Limit Settings -->
+    <li class="k-state-active"> 
+        <span class="panel-bar-label-no-wrap">LO Alarm Settings</span>
+        <div class="config-option-single-row" style="margin:10px 20px; font-size: 14px;"> 
+            <div class="config-option-ie11-overflow-fix"> 
+                <!-- Input for Alarm Limit -->
+                <div class="config-label">LO Alarm Limit:</div>
+                <input type="number" step="0.01" style="width: 100px;height: 100%;float: right;margin-right: 25px;" ng-model="config.LO.limit">
+                <!-- If limit was provided allow selection of text and background color -->
+                <div ng-show="config.LO.limit != undefined" style="width: 85%; margin: 10px 0 15px 20px;">
+                    <pv-color-picker colorkeyword="Background" ng-model="config.LO.backgroundColor"></pv-color-picker>
+                    <pv-color-picker colorkeyword="Text Color" ng-model="config.LO.textColor"></pv-color-picker>
+                    <pv-color-picker colorkeyword="Value Color" ng-model="config.LO.valueColor"></pv-color-picker>
+                </div>
+            </div>
+        </div> 
+    </li>
+    <!-- LOLO Limit Settings  Only Displayed if LO Limit is set -->
+    <li class="k-state-disable" ng-show="config.LO.limit != undefined"> 
+        <span class="panel-bar-label-no-wrap">LOLO Alarm Settings</span>
+        <div class="config-option-single-row" style="margin:10px 20px; font-size: 14px;"> 
+            <div class="config-option-ie11-overflow-fix"> 
+                <!-- Input for Alarm Limit -->
+                <div class="config-label">LOLO Alarm Limit:</div>
+                <input type="number" step="0.01" style="width: 100px;height: 100%;float: right;margin-right: 25px;" ng-model="config.LOLO.limit">
+                <!-- If limit was provided allow selection of text and background color -->
+                <div ng-show="config.LOLO.limit != undefined" style="width: 85%; margin: 10px 0 15px 20px;">
+                    <pv-color-picker colorkeyword="Background" ng-model="config.LOLO.backgroundColor"></pv-color-picker>
+                    <pv-color-picker colorkeyword="Text Color" ng-model="config.LOLO.textColor"></pv-color-picker>
+                    <pv-color-picker colorkeyword="Value Color" ng-model="config.LOLO.valueColor"></pv-color-picker>
+                </div>
+            </div>
+        </div> 
+    </li>
+</ul>
